@@ -2,18 +2,25 @@
 #include <string.h>
 #include "funciones.h"
 
-
 void leerDatos(Zona zonas[]) {
     for (int i = 0; i < ZONAS; i++) {
         printf("\nIngrese el Nombre de la Zona %d:\n", i + 1);
+        
+        // Limpiamos el buffer antes de usar fgets
+        while (getchar() != '\n'); 
         fgets(zonas[i].nombre, sizeof(zonas[i].nombre), stdin);
         size_t len = strlen(zonas[i].nombre);
         if (len > 0 && zonas[i].nombre[len - 1] == '\n') {
-        zonas[i].nombre[len - 1] = '\0';
-}
+            zonas[i].nombre[len - 1] = '\0';
+        }
+
         do {
             printf("Nivel actual de contaminacion: ");
-            scanf("%f", &zonas[i].nivelesActuales);
+            if (scanf("%f", &zonas[i].nivelesActuales) != 1) {
+                printf("Error: entrada invalida. Intente de nuevo.\n");
+                while (getchar() != '\n'); // Limpiamos el buffer
+                continue;
+            }
             if (zonas[i].nivelesActuales < 0 || zonas[i].nivelesActuales > 100) {
                 printf("Error: ingrese un numero entre 0 y 100.\n");
             }
@@ -23,7 +30,11 @@ void leerDatos(Zona zonas[]) {
         for (int j = 0; j < DIAS_HISTORICOS; j++) {
             do {
                 printf("Dia %d: ", j + 1);
-                scanf("%f", &zonas[i].historicos[j]);
+                if (scanf("%f", &zonas[i].historicos[j]) != 1) {
+                    printf("Error: entrada invalida. Intente de nuevo.\n");
+                    while (getchar() != '\n'); // Limpiamos el buffer
+                    continue;
+                }
                 if (zonas[i].historicos[j] < 0 || zonas[i].historicos[j] > 100) {
                     printf("Error: ingrese un numero entre 0 y 100.\n");
                 }
@@ -32,7 +43,11 @@ void leerDatos(Zona zonas[]) {
 
         do {
             printf("Temperatura (C): ");
-            scanf("%f", &zonas[i].temperatura);
+            if (scanf("%f", &zonas[i].temperatura) != 1) {
+                printf("Error: entrada invalida. Intente de nuevo.\n");
+                while (getchar() != '\n');
+                continue;
+            }
             if (zonas[i].temperatura < -10 || zonas[i].temperatura > 100) {
                 printf("Error: ingrese un numero entre -10 y 100.\n");
             }
@@ -40,7 +55,11 @@ void leerDatos(Zona zonas[]) {
 
         do {
             printf("Velocidad del viento (m/s): ");
-            scanf("%f", &zonas[i].velocidadViento);
+            if (scanf("%f", &zonas[i].velocidadViento) != 1) {
+                printf("Error: entrada invalida. Intente de nuevo.\n");
+                while (getchar() != '\n');
+                continue;
+            }
             if (zonas[i].velocidadViento < 0 || zonas[i].velocidadViento > 100) {
                 printf("Error: ingrese un numero entre 0 y 100.\n");
             }
@@ -48,7 +67,11 @@ void leerDatos(Zona zonas[]) {
 
         do {
             printf("Humedad relativa (%%): ");
-            scanf("%f", &zonas[i].humedad);
+            if (scanf("%f", &zonas[i].humedad) != 1) {
+                printf("Error: entrada invalida. Intente de nuevo.\n");
+                while (getchar() != '\n');
+                continue;
+            }
             if (zonas[i].humedad < 0 || zonas[i].humedad > 100) {
                 printf("Error: ingrese un numero entre 0 y 100.\n");
             }
@@ -56,7 +79,11 @@ void leerDatos(Zona zonas[]) {
 
         do {
             printf("Contribucion del trafico (%%): ");
-            scanf("%f", &zonas[i].contribucionTrafico);
+            if (scanf("%f", &zonas[i].contribucionTrafico) != 1) {
+                printf("Error: entrada invalida. Intente de nuevo.\n");
+                while (getchar() != '\n');
+                continue;
+            }
             if (zonas[i].contribucionTrafico < 0 || zonas[i].contribucionTrafico > 100) {
                 printf("Error: ingrese un numero entre 0 y 100.\n");
             }
@@ -64,7 +91,11 @@ void leerDatos(Zona zonas[]) {
 
         do {
             printf("Contribucion de las industrias (%%): ");
-            scanf("%f", &zonas[i].contribucionIndustrias);
+            if (scanf("%f", &zonas[i].contribucionIndustrias) != 1) {
+                printf("Error: entrada invalida. Intente de nuevo.\n");
+                while (getchar() != '\n');
+                continue;
+            }
             if (zonas[i].contribucionIndustrias < 0 || zonas[i].contribucionIndustrias > 100) {
                 printf("Error: ingrese un numero entre 0 y 100.\n");
             }
@@ -72,15 +103,23 @@ void leerDatos(Zona zonas[]) {
 
         do {
             printf("Nivel actual de CO2 (ppm): ");
-            scanf("%f", &zonas[i].nivelesCO2);
+            if (scanf("%f", &zonas[i].nivelesCO2) != 1) {
+                printf("Error: entrada invalida. Intente de nuevo.\n");
+                while (getchar() != '\n');
+                continue;
+            }
             if (zonas[i].nivelesCO2 < 0 || zonas[i].nivelesCO2 > 500) {
-                printf("Error: ingrese un numero entre 0 y 100.\n");
+                printf("Error: ingrese un numero entre 0 y 500.\n");
             }
         } while (zonas[i].nivelesCO2 < 0 || zonas[i].nivelesCO2 > 500);
 
         do {
             printf("Nivel actual de NO2 (ppb): ");
-            scanf("%f", &zonas[i].nivelesNO2);
+            if (scanf("%f", &zonas[i].nivelesNO2) != 1) {
+                printf("Error: entrada invalida. Intente de nuevo.\n");
+                while (getchar() != '\n');
+                continue;
+            }
             if (zonas[i].nivelesNO2 < 0 || zonas[i].nivelesNO2 > 100) {
                 printf("Error: ingrese un numero entre 0 y 100.\n");
             }
@@ -88,7 +127,11 @@ void leerDatos(Zona zonas[]) {
 
         do {
             printf("Nivel actual de SO2 (ppb): ");
-            scanf("%f", &zonas[i].nivelesSO2);
+            if (scanf("%f", &zonas[i].nivelesSO2) != 1) {
+                printf("Error: entrada invalida. Intente de nuevo.\n");
+                while (getchar() != '\n');
+                continue;
+            }
             if (zonas[i].nivelesSO2 < 0 || zonas[i].nivelesSO2 > 100) {
                 printf("Error: ingrese un numero entre 0 y 100.\n");
             }
@@ -96,7 +139,11 @@ void leerDatos(Zona zonas[]) {
 
         do {
             printf("Nivel actual de PM2.5 (ug/m3): ");
-            scanf("%f", &zonas[i].nivelesPM25);
+            if (scanf("%f", &zonas[i].nivelesPM25) != 1) {
+                printf("Error: entrada invalida. Intente de nuevo.\n");
+                while (getchar() != '\n');
+                continue;
+            }
             if (zonas[i].nivelesPM25 < 0 || zonas[i].nivelesPM25 > 100) {
                 printf("Error: ingrese un numero entre 0 y 100.\n");
             }

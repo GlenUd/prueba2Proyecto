@@ -1,4 +1,4 @@
-#define ZONAS 1
+#define ZONAS 5  // Cambiamos de 2 a 5
 #define DIAS_HISTORICOS 4
 #define LIMITE_PM25 0.0
 #define MAX_PM25 35.0
@@ -24,6 +24,7 @@
 #define MODERADO_VIENTO_MAX 10.0
 #define MODERADO_CONTAMINACION_MIN 10.0
 #define MODERADO_CONTAMINACION_MAX 100.0
+
 struct Zona {
     char nombre[50];
     float nivelesActuales;
