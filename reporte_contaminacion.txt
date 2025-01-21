@@ -1,0 +1,16 @@
+Reporte de Contaminacion Ambiental
+==============================================================
+
+Zona: guayaquil
+Nivel actual: 34.00
+Prediccion: 35.70
+
+
+Rangos de Contaminacion y Condiciones Ambientales:
+NO2 (ppb): 23.00
+SO2 (ppb): 18.00
+PM2.5 (ug/m3): 6.00
+Temperatura (C): 24.00
+Humedad Relativa (%): 63.00
+Velocidad del Viento (m/s): 8.00
+================================================================
