@@ -1,5 +1,5 @@
 #define ZONAS 5  // Cambiamos de 2 a 5
-#define DIAS_HISTORICOS 4
+#define DIAS_HISTORICOS 7
 #define LIMITE_PM25 0.0
 #define MAX_PM25 35.0
 #define LIMITE_CO2 350.0

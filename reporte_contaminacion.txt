@@ -1,16 +1,68 @@
 Reporte de Contaminacion Ambiental
 ==============================================================
 
-Zona: guayaquil
-Nivel actual: 43.00
-Prediccion: 45.15
+Zona: 
+Nivel actual: 34.00
+Prediccion: 35.70
 
 
 Rangos de Contaminacion y Condiciones Ambientales:
-NO2 (ppb): 23.00
+NO2 (ppb): 56.00
+SO2 (ppb): 23.00
+PM2.5 (ug/m3): 45.00
+Temperatura (C): 56.00
+Humedad Relativa (%): 23.00
+Velocidad del Viento (m/s): 12.00
+================================================================
+Zona: 12
+Nivel actual: 23.00
+Prediccion: 24.15
+
+
+Rangos de Contaminacion y Condiciones Ambientales:
+NO2 (ppb): 12.00
+SO2 (ppb): 23.00
+PM2.5 (ug/m3): 2.00
+Temperatura (C): 12.00
+Humedad Relativa (%): 34.00
+Velocidad del Viento (m/s): 12.00
+================================================================
+Zona: 21
+Nivel actual: 21.00
+Prediccion: 22.05
+
+
+Rangos de Contaminacion y Condiciones Ambientales:
+NO2 (ppb): 12.00
 SO2 (ppb): 12.00
-PM2.5 (ug/m3): 31.00
-Temperatura (C): 23.00
-Humedad Relativa (%): 68.00
-Velocidad del Viento (m/s): 8.00
+PM2.5 (ug/m3): 1.00
+Temperatura (C): 12.00
+Humedad Relativa (%): 12.00
+Velocidad del Viento (m/s): 11.00
+================================================================
+Zona: 12
+Nivel actual: 12.00
+Prediccion: 12.60
+
+
+Rangos de Contaminacion y Condiciones Ambientales:
+NO2 (ppb): 12.00
+SO2 (ppb): 12.00
+PM2.5 (ug/m3): 12.00
+Temperatura (C): 12.00
+Humedad Relativa (%): 12.00
+Velocidad del Viento (m/s): 12.00
+================================================================
+Zona: 12
+Nivel actual: 12.00
+Prediccion: 12.60
+
+
+Rangos de Contaminacion y Condiciones Ambientales:
+NO2 (ppb): 12.00
+SO2 (ppb): 12.00
+PM2.5 (ug/m3): 12.00
+Temperatura (C): 12.00
+Humedad Relativa (%): 12.00
+Velocidad del Viento (m/s): 12.00
 ================================================================
