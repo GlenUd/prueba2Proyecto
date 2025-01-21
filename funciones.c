@@ -106,11 +106,11 @@ void leerDatos(Zona zonas[]) {
 
 void mostrarRangosModerados() {
     printf("\nRangos Moderados de Contaminacion y Condiciones Ambientales:\n");
-    printf("CO2 (ppm): %.1f - %.1f\n", MODERADO_CO2_MIN, MODERADO_CO2_MAX);
+    printf("CO2 (ppm): %.2f - %.2f\n", MODERADO_CO2_MIN, MODERADO_CO2_MAX);
     printf("NO2 (ppb): %.1f - %.1f\n", MODERADO_NO2_MIN, MODERADO_NO2_MAX);
     printf("SO2 (ppb): %.1f - %.1f\n", MODERADO_SO2_MIN, MODERADO_SO2_MAX);
-    printf("PM2.5 (ug/m3): %.1f - %.1f\n", MODERADO_PM25_MIN, MODERADO_PM25_MAX);
-    printf("Temperatura (C): %.1f - %.1f\n", MODERADO_TEMPERATURA_MIN, MODERADO_TEMPERATURA_MAX);
+    printf("PM2.5 (ug/m3): %.1f - %.2f\n", MODERADO_PM25_MIN, MODERADO_PM25_MAX);
+    printf("Temperatura (C): %.1f - %.2f\n", MODERADO_TEMPERATURA_MIN, MODERADO_TEMPERATURA_MAX);
     printf("Humedad Relativa (%%): %.1f - %.1f\n", MODERADO_HUMEDAD_MIN, MODERADO_HUMEDAD_MAX);
     printf("Velocidad del Viento (m/s): %.1f - %.1f\n", MODERADO_VIENTO_MIN, MODERADO_VIENTO_MAX);
 }
